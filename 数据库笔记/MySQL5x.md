@@ -12,10 +12,10 @@ grant all privileges on 数据库名.表名 to '用户名'@'地址' identified b
 
 >例子:
 >1. 设置root用户可以使用`000000`密码`远程`登陆`所有`数据库的`所有`表  
->	grant all privileges on *.* to 'root'@'%' identified by '000000';	
+>	grant all privileges on \*.\* to 'root'@'%' identified by '000000';	
 >
 >2. 设置root用户可以使用`000000`密码`本地`登陆`所有`数据库的`所有`表  
->	grant all privileges on *.* to 'root'@'localhost' identified by '000000';  
+>	grant all privileges on \*.\* to 'root'@'localhost' identified by '000000';  
   
 #### 刷新权限
 
