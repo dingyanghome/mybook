@@ -7,7 +7,7 @@
 设置用户的访问权限
 
 ```
-	grant all privileges on 数据库名.表名 to '用户名'@'地址' identified by '密码';
+grant all privileges on 数据库名.表名 to '用户名'@'地址' identified by '密码';
 ```
 
 >例子:
@@ -22,7 +22,7 @@
 刷新数据库权限，使得设置生效
 
 ```
-	flush privileges;
+flush privileges;
 ```
 
 ### 二、字符集设置
@@ -32,25 +32,46 @@
 查看 MySQL 数据库服务器和数据库字符集
 
 ```
-	show variables like '%character%';
+show variables like '%character%';
 ```  
 
 查看 MySQL 所支持的字符集
 
 ```
-	show charset;
+show charset;
 ```  
 
-查看数据库的字符集
+查看创建数据库的字符集
 
 ```
-	show create database from 库名;
+show create database from 库名;
 ```  
 
 #### 修改字符集
 
-修改 my.ini 配置文件
+使用`alter`修改数据库字符集
 
+```
+alter database 数据库名 character set utf8;
+```
+
+ps: 修改完之后需要重启数据库才能生效
+
+使用`alter`修改表的字符集
+
+```
+alter table 表名 default character set utf8 collate utf8_general_ci;
+```
+
+#### 配置文件中修改字符集
+
+在 my.ini(windows)/my.cnf(Linux) 配置文件中修改
+
+```
+character_set_server = utf8
+```
+
+PS: 配置完需重启服务器
 
 ### 三、数据库(database)操作
 
@@ -65,6 +86,14 @@ create database 数据库名;
 >例子：
 >1. 创建Test数据库  
 >	create database Test; 
+
+创建数据库的时候指定字符集
+
+```
+create database if not exists 库名 default character set='utf8';
+```
+
+ps: 通过`default character set`来指定数据库的字符集
   
 #### 查看数据库
 

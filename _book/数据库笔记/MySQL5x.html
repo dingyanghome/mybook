@@ -258,7 +258,7 @@
 <h3 id="&#x4E00;&#x3001;&#x7528;&#x6237;&#x7BA1;&#x7406;">&#x4E00;&#x3001;&#x7528;&#x6237;&#x7BA1;&#x7406;</h3>
 <h4 id="&#x7528;&#x6237;&#x6388;&#x6743;">&#x7528;&#x6237;&#x6388;&#x6743;</h4>
 <p>&#x8BBE;&#x7F6E;&#x7528;&#x6237;&#x7684;&#x8BBF;&#x95EE;&#x6743;&#x9650;</p>
-<pre><code>    grant all privileges on &#x6570;&#x636E;&#x5E93;&#x540D;.&#x8868;&#x540D; to &apos;&#x7528;&#x6237;&#x540D;&apos;@&apos;&#x5730;&#x5740;&apos; identified by &apos;&#x5BC6;&#x7801;&apos;;
+<pre><code>grant all privileges on &#x6570;&#x636E;&#x5E93;&#x540D;.&#x8868;&#x540D; to &apos;&#x7528;&#x6237;&#x540D;&apos;@&apos;&#x5730;&#x5740;&apos; identified by &apos;&#x5BC6;&#x7801;&apos;;
 </code></pre><blockquote>
 <p>&#x4F8B;&#x5B50;:</p>
 <ol>
@@ -270,17 +270,25 @@
 </blockquote>
 <h4 id="&#x5237;&#x65B0;&#x6743;&#x9650;">&#x5237;&#x65B0;&#x6743;&#x9650;</h4>
 <p>&#x5237;&#x65B0;&#x6570;&#x636E;&#x5E93;&#x6743;&#x9650;&#xFF0C;&#x4F7F;&#x5F97;&#x8BBE;&#x7F6E;&#x751F;&#x6548;</p>
-<pre><code>    flush privileges;
+<pre><code>flush privileges;
 </code></pre><h3 id="&#x4E8C;&#x3001;&#x5B57;&#x7B26;&#x96C6;&#x8BBE;&#x7F6E;">&#x4E8C;&#x3001;&#x5B57;&#x7B26;&#x96C6;&#x8BBE;&#x7F6E;</h3>
 <h4 id="&#x67E5;&#x770B;&#x5B57;&#x7B26;&#x96C6;">&#x67E5;&#x770B;&#x5B57;&#x7B26;&#x96C6;</h4>
 <p>&#x67E5;&#x770B; MySQL &#x6570;&#x636E;&#x5E93;&#x670D;&#x52A1;&#x5668;&#x548C;&#x6570;&#x636E;&#x5E93;&#x5B57;&#x7B26;&#x96C6;</p>
-<pre><code>    show variables like &apos;%character%&apos;;
+<pre><code>show variables like &apos;%character%&apos;;
 </code></pre><p>&#x67E5;&#x770B; MySQL &#x6240;&#x652F;&#x6301;&#x7684;&#x5B57;&#x7B26;&#x96C6;</p>
-<pre><code>    show charset;
-</code></pre><p>&#x67E5;&#x770B;&#x6570;&#x636E;&#x5E93;&#x7684;&#x5B57;&#x7B26;&#x96C6;</p>
-<pre><code>    show create database from &#x5E93;&#x540D;;
+<pre><code>show charset;
+</code></pre><p>&#x67E5;&#x770B;&#x521B;&#x5EFA;&#x6570;&#x636E;&#x5E93;&#x7684;&#x5B57;&#x7B26;&#x96C6;</p>
+<pre><code>show create database from &#x5E93;&#x540D;;
 </code></pre><h4 id="&#x4FEE;&#x6539;&#x5B57;&#x7B26;&#x96C6;">&#x4FEE;&#x6539;&#x5B57;&#x7B26;&#x96C6;</h4>
-<p>&#x4FEE;&#x6539; my.ini &#x914D;&#x7F6E;&#x6587;&#x4EF6;</p>
+<p>&#x4F7F;&#x7528;<code>alter</code>&#x4FEE;&#x6539;&#x6570;&#x636E;&#x5E93;&#x5B57;&#x7B26;&#x96C6;</p>
+<pre><code>alter database &#x6570;&#x636E;&#x5E93;&#x540D; character set utf8;
+</code></pre><p>ps: &#x4FEE;&#x6539;&#x5B8C;&#x4E4B;&#x540E;&#x9700;&#x8981;&#x91CD;&#x542F;&#x6570;&#x636E;&#x5E93;&#x624D;&#x80FD;&#x751F;&#x6548;</p>
+<p>&#x4F7F;&#x7528;<code>alter</code>&#x4FEE;&#x6539;&#x8868;&#x7684;&#x5B57;&#x7B26;&#x96C6;</p>
+<pre><code>alter table &#x8868;&#x540D; default character set utf8 collate utf8_general_ci;
+</code></pre><h4 id="&#x914D;&#x7F6E;&#x6587;&#x4EF6;&#x4E2D;&#x4FEE;&#x6539;&#x5B57;&#x7B26;&#x96C6;">&#x914D;&#x7F6E;&#x6587;&#x4EF6;&#x4E2D;&#x4FEE;&#x6539;&#x5B57;&#x7B26;&#x96C6;</h4>
+<p>&#x5728; my.ini(windows)/my.cnf(Linux) &#x914D;&#x7F6E;&#x6587;&#x4EF6;&#x4E2D;&#x4FEE;&#x6539;</p>
+<pre><code>character_set_server = utf8
+</code></pre><p>PS: &#x914D;&#x7F6E;&#x5B8C;&#x9700;&#x91CD;&#x542F;&#x670D;&#x52A1;&#x5668;</p>
 <h3 id="&#x4E09;&#x3001;&#x6570;&#x636E;&#x5E93;database&#x64CD;&#x4F5C;">&#x4E09;&#x3001;&#x6570;&#x636E;&#x5E93;(database)&#x64CD;&#x4F5C;</h3>
 <h4 id="&#x521B;&#x5EFA;&#x6570;&#x636E;&#x5E93;">&#x521B;&#x5EFA;&#x6570;&#x636E;&#x5E93;</h4>
 <p>&#x521B;&#x5EFA;&#x6570;&#x636E;&#x5E93;  </p>
@@ -291,6 +299,9 @@
 <li>&#x521B;&#x5EFA;Test&#x6570;&#x636E;&#x5E93;<br>create database Test; </li>
 </ol>
 </blockquote>
+<p>&#x521B;&#x5EFA;&#x6570;&#x636E;&#x5E93;&#x7684;&#x65F6;&#x5019;&#x6307;&#x5B9A;&#x5B57;&#x7B26;&#x96C6;</p>
+<pre><code>create database if not exists &#x5E93;&#x540D; default character set=&apos;utf8&apos;;
+</code></pre><p>ps: &#x901A;&#x8FC7;<code>default character set</code>&#x6765;&#x6307;&#x5B9A;&#x6570;&#x636E;&#x5E93;&#x7684;&#x5B57;&#x7B26;&#x96C6;</p>
 <h4 id="&#x67E5;&#x770B;&#x6570;&#x636E;&#x5E93;">&#x67E5;&#x770B;&#x6570;&#x636E;&#x5E93;</h4>
 <p>&#x663E;&#x793A;&#x6240;&#x6709;&#x6570;&#x636E;&#x5E93;</p>
 <pre><code>show databases;
@@ -339,7 +350,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"MySQL5.x 数据库","level":"1.2.1","depth":2,"next":{"title":"MySQL8.x 数据库","level":"1.2.2","depth":2,"path":"数据库笔记/MySQL8x.md","ref":"数据库笔记/MySQL8x.md","articles":[]},"previous":{"title":"数据库笔记","level":"1.2","depth":1,"ref":"","articles":[{"title":"MySQL5.x 数据库","level":"1.2.1","depth":2,"path":"数据库笔记/MySQL5x.md","ref":"数据库笔记/MySQL5x.md","articles":[]},{"title":"MySQL8.x 数据库","level":"1.2.2","depth":2,"path":"数据库笔记/MySQL8x.md","ref":"数据库笔记/MySQL8x.md","articles":[]}]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["livereload"],"pluginsConfig":{"livereload":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"数据库笔记/MySQL5x.md","mtime":"2019-11-16T12:48:10.073Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-11-16T12:48:16.673Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"MySQL5.x 数据库","level":"1.2.1","depth":2,"next":{"title":"MySQL8.x 数据库","level":"1.2.2","depth":2,"path":"数据库笔记/MySQL8x.md","ref":"数据库笔记/MySQL8x.md","articles":[]},"previous":{"title":"数据库笔记","level":"1.2","depth":1,"ref":"","articles":[{"title":"MySQL5.x 数据库","level":"1.2.1","depth":2,"path":"数据库笔记/MySQL5x.md","ref":"数据库笔记/MySQL5x.md","articles":[]},{"title":"MySQL8.x 数据库","level":"1.2.2","depth":2,"path":"数据库笔记/MySQL8x.md","ref":"数据库笔记/MySQL8x.md","articles":[]}]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["livereload"],"pluginsConfig":{"livereload":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"数据库笔记/MySQL5x.md","mtime":"2019-11-16T13:33:24.850Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-11-16T13:33:28.535Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>
