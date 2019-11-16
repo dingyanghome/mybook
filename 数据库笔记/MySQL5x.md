@@ -1,7 +1,5 @@
 # MySQL5.x 数据库
 
-------
-
 ### 用户管理
 
 1. 用户授权
@@ -13,19 +11,13 @@
 >
 >2. `grant all privileges on *.* to 'root'@'localhost' identified by '000000';`设置root用户可以使用`000000`密码本地登陆所有数据库的所有表
 
-
-
 2. 刷新权限
 
   * 使用`flush privileges;`刷新数据库权限，使得设置生效。
 
-------
-
 ### 字符设置
 
 1. 更新中...
-
-------
 
 ### 数据库(database)操作
 
@@ -36,19 +28,13 @@
 >例子：
 >1. `create database Test`创建__Test__数据库
 
-
-
 2. 查看数据库
 
   * 使用`show databases;`显示所有数据库
 
-------
-
 ### 表(table)操作
 
 1. 更新中...
-
-------
 
 ### 查询(select)操作
 
