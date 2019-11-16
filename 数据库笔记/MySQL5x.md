@@ -7,7 +7,7 @@
 设置用户的访问权限
 
 ```
-	grant all privileges on 数据库名.表名 to '用户名'@'地址' identified by '密码';
+grant all privileges on 数据库名.表名 to '用户名'@'地址' identified by '密码';
 ```
 
 >例子:
@@ -22,7 +22,7 @@
 刷新数据库权限，使得设置生效
 
 ```
-	flush privileges;
+flush privileges;
 ```
 
 ### 二、字符集设置
@@ -32,19 +32,19 @@
 查看 MySQL 数据库服务器和数据库字符集
 
 ```
-	show variables like '%character%';
+show variables like '%character%';
 ```  
 
 查看 MySQL 所支持的字符集
 
 ```
-	show charset;
+show charset;
 ```  
 
 查看数据库的字符集
 
 ```
-	show create database from 库名;
+show create database from 库名;
 ```  
 
 #### 修改字符集
