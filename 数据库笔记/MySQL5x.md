@@ -26,7 +26,7 @@
 	* 使用`create database 数据库名`创建数据库
 
 >例子：
->1. `create database Test`创建__Test__数据库
+>1. `create database Test`创建Test数据库
 
 2. 查看数据库
 
