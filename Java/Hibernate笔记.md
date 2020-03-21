@@ -1,7 +1,6 @@
 # Hibernate 笔记
 
 
-
 配置 hibernate.cfg.xml 配置文件
 ```xml
 	<!-- 约束 -->
