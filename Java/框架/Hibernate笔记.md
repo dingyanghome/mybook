@@ -1,4 +1,4 @@
-# Hibernate 笔记
+# Hibernate
 
 
 配置 hibernate.cfg.xml 配置文件
