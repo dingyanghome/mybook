@@ -10,5 +10,7 @@
     * [Structs2 笔记](Java/框架/Structs2笔记.md)
 * Python
     * [Python 笔记](Python/Python笔记.md)
+* 随笔
+	* [在树莓派中部署 minidlna](随笔/在树莓派中部署minidlna.md)
 * 其他
     * [测试](测试/Test.md)
